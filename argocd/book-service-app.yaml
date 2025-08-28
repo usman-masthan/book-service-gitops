@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: book-service
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/YOUR_USERNAME/book-service-gitops.git'
+    targetRevision: main
+    path: apps/book-service
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
