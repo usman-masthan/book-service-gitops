@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/YOUR_USERNAME/book-service-gitops.git'
+    repoURL: 'https://github.com/usman-masthan/book-service-gitops.git'
     targetRevision: main
     path: apps/book-service
   destination:
